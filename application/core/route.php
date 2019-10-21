@@ -1,6 +1,7 @@
 <?php
 include_once 'application/models/model_content.php';
 include_once 'application/models/model_module.php';
+include_once 'application/models/model_login.php';
 
 
 
@@ -14,7 +15,6 @@ class Route
 
 	static function start()
 	{
-
 
         $GLOBALS['debug_mode'] = 'false';
         if(stristr($_SERVER['REQUEST_URI'], '?debug') !== FALSE) {

@@ -8,7 +8,6 @@ include_once '../models/model_list.php';
 
 
 
-
 if (isset($_POST["action"])){
 
     $function = htmlspecialchars($_POST["action"]).'_action';
@@ -174,8 +173,6 @@ function cartObject_action(){
     echo json_encode($result);
 
 }
-
-
 
 
 

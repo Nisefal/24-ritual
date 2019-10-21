@@ -260,7 +260,6 @@ class Model_Content{
 
                             ");
 
-
     }
 
 
@@ -343,8 +342,6 @@ class Model_Content{
                                                         preview = '$preview'
                                                     WHERE `id` = '$page_content_id'
                                 ");
-
-
 
 
 
