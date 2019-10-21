@@ -1,0 +1,17 @@
+#php_flag display_errors 1
+
+
+
+#включение записи всех логов
+#php_value log_errors "On"
+#
+#php_value auto_prepend_file /Users/homushka/PhpstormProjects/24-ritual-seo/modules/log/save_log.php
+#php_value error_log /Users/homushka/PhpstormProjects/24-ritual-seo/modules/log/php_errors.log
+
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L]
+

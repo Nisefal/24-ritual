@@ -1,0 +1,33 @@
+.blokimg {
+position: relative;
+}
+.overlay{
+display: none;
+height: auto;
+left: -15%;
+position: absolute;
+top: -50%;
+width: auto;
+z-index: 999;
+}
+.overlay .overlay_container{
+display: table-cell;
+vertical-align: middle;
+}
+.overlay_container img{
+background-color: #AB5;
+padding: 10px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+}
+.overlay:target {
+display: table;
+}
+
+/*maps*/
+ #map {
+     width: 100%; height: 100%; padding: 0; margin: 0;
+}
+
+ /* index*/
+
