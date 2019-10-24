@@ -4,6 +4,7 @@ session_start();
 include_once '../models/model_content.php';
 include_once '../models/model_catalog.php';
 include_once '../models/model_list.php';
+include_once '../models/model_API.php';
 
 
 
@@ -11,12 +12,15 @@ include_once '../models/model_list.php';
 if (isset($_POST["action"])){
 
     $function = htmlspecialchars($_POST["action"]).'_action';
-    $function($_POST["data"]);
+    $function($_POST["data"], $_POST["key"]);
 
 }
 
 
-function contentPage_action($data){
+function contentPage_action($data, $key){
+	
+	if(!validate_key($key))
+		exit();
 
     $model_content = new Model_Content();
 
@@ -27,12 +31,13 @@ function contentPage_action($data){
 
     echo json_encode($result);
 
-
 }
 
 
-function getPages_action($data){
-
+function getPages_action($data, $key){
+	
+	if(!validate_key($key))
+		exit();
 
     $model_content = new Model_Content();
 
@@ -49,15 +54,14 @@ function getPages_action($data){
 
 }
 
-function getData_action(){
-
-
+function getData_action($key){
+	
+	if(!validate_key($key))
+		exit();
 
     $model_content = new Model_Content();
     $page_content = $model_content->get_data($_POST["data"], '');
     $modules_multiple = $model_content->get_multiple($_POST["data"]);
-
-
 
 
     $result = array(
@@ -72,7 +76,10 @@ function getData_action(){
 }
 
 
-function saveContent_action($data){
+function saveContent_action($data, $key){
+	
+	if(!validate_key($key))
+		exit();
 
     $model_content = new Model_Content();
     $HTML_pages = $model_content->saveContent($data);
@@ -85,7 +92,10 @@ function saveContent_action($data){
 
 }
 //возвращает html-список типов товара
-function getCatalog_action(){
+function getCatalog_action($key){
+	
+	if(!validate_key($key))
+		exit();
 
     $model_catalog = new Model_catalog();
     $HTML_pages = $model_catalog->returnCatalog();
@@ -100,7 +110,10 @@ function getCatalog_action(){
 
 
 
-function getCatalogProduct_action(){
+function getCatalogProduct_action($key){
+	
+	if(!validate_key($key))
+		exit();
 
     $model_catalog = new Model_catalog();
     $HTML_pages = $model_catalog->getCatalogProduct($_POST["url"]);
@@ -113,7 +126,10 @@ function getCatalogProduct_action(){
 
 }
 
-function getRecommendationProduct_action(){
+function getRecommendationProduct_action($key){
+	
+	if(!validate_key($key))
+		exit();
 
     $model_catalog = new Model_catalog();
     $HTML_pages = $model_catalog->getRecommendationProduct();
@@ -128,7 +144,10 @@ function getRecommendationProduct_action(){
 
 
 
-function getProductCart_action(){
+function getProductCart_action($key){
+	
+	if(!validate_key($key))
+		exit();
 
     $model_catalog = new Model_catalog();
     $HTML_pages = $model_catalog->getProductCart($_POST["product_id"]);
@@ -145,7 +164,10 @@ function getProductCart_action(){
 
 
 //возвращает список заведений по странице
-function list_content_action(){
+function list_content_action($key){
+	
+	if(!validate_key($key))
+		exit();
 
     $model_list = new Model_list();
     $HTML_pages = $model_list->getList($_POST["url"]);
@@ -160,7 +182,10 @@ function list_content_action(){
 }
 
 
-function cartObject_action(){
+function cartObject_action($key){
+	
+	if(!validate_key($key))
+		exit();
 
     $model_list = new Model_list();
     $HTML_pages = $model_list->cartObject($_POST["product_id"]);
@@ -175,5 +200,9 @@ function cartObject_action(){
 }
 
 
-
+function validate_key($key) {
+	$model = new Model_API();
+	$result = $model->check_key($key);
+	return $result;
+}
 
