@@ -19,7 +19,6 @@ class View
 			extract($data);
 		}
 
-		
 		/*
 		динамически подключаем общий шаблон (вид),
 		внутри которого будет встраиваться вид
@@ -28,3 +27,4 @@ class View
         include 'application/views/'.$template_view;
 	}
 }
+?>

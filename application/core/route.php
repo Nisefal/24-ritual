@@ -16,6 +16,7 @@ class Route
 	static function start()
 	{
 
+
         $GLOBALS['debug_mode'] = 'false';
         if(stristr($_SERVER['REQUEST_URI'], '?debug') !== FALSE) {
             $GLOBALS['debug_mode'] = 'true';
@@ -60,6 +61,8 @@ class Route
 		{
 			include "application/models/".$model_file;
 		}
+
+
 		// в идеале тут надо делать запрос из бд и получать контент страницы а не искать по названию страницу во вьюхах
 
 
@@ -81,7 +84,6 @@ class Route
 		// создаем контроллер, передаем все что взяли из базки в консутруктор страницы
 		$controller = new $controller_name;
 		$controller->content = $model_content;
-
 
 
 		$action = 'action_index';

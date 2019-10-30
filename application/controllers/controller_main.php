@@ -6,6 +6,7 @@ include_once'application/models/model_download.php';
 
 
 
+
 class Controller_Main extends Controller
 {
 
@@ -21,8 +22,6 @@ class Controller_Main extends Controller
 
     function action_index($headerNavigation_content, $header_content, $menu_content, $left_content, $body_content, $footer_content)
 	{
-
-
 
 	    //на этом месте
 
@@ -69,7 +68,6 @@ class Controller_Main extends Controller
         );
 
 
-
         $this->view->generate($content["template"].'_view.php',$data, '');
 	}
 
@@ -88,3 +86,5 @@ class Controller_Main extends Controller
 
 
 }
+
+?>
