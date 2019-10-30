@@ -39,8 +39,3 @@ class Model_randomContent{
 
 ?>
 
-<html>
-
-</html>
-
-
