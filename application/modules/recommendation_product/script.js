@@ -4,7 +4,7 @@ console.log('Подгрузился js файл к модулю рекоменд
 function get_pages() {
 
     $.ajax({
-        url: '/application/controllers/ajax_controller.php',
+        url: '/application/modules/recommendation_product/ajax_controller.php',
         method: 'POST',
         data: {
             action: 'getRecommendationProduct'

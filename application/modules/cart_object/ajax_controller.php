@@ -6,8 +6,6 @@ include_once '../models/model_catalog.php';
 include_once '../models/model_API.php';
 
 
-
-
 if (isset($_POST["action"])){
 
     $function = htmlspecialchars($_POST["action"]).'_action';

@@ -23,7 +23,7 @@ function get_pages() {
 
 
     $.ajax({
-        url: '/application/controllers/ajax_controller.php',
+        url: '/application/modules/cart_product/ajax_controller.php',
         method: 'POST',
         data: {
             action: 'getProductCart',

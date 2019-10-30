@@ -3,7 +3,7 @@
 function get_pages() {
 
     $.ajax({
-        url: '/application/controllers/ajax_controller.php',
+        url: '/application/modules/form_and_pages/ajax_controller.php',
         method: 'POST',
         data: {
             action: 'getPages'
