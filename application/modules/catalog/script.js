@@ -4,7 +4,7 @@ console.log('Подгрузился js файл к модулю каталог')
 function get_pages() {
 
     $.ajax({
-        url: '/application/controllers/ajax_controller.php',
+        url: '/application/modules/catalog/ajax_controller.php',
         method: 'POST',
         data: {
             action: 'getCatalog',

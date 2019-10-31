@@ -24,39 +24,29 @@ for($i=0; $i <200; $i++){
     file_put_contents('image'.$i.'.png', $img);
 
 
-}*/
-
-?>
-<!DOCTYPE HTML>
+}*/?>
+<!DOCTYPE html>
+<html>
     <head>
-
         <script>
-
-
-        console.log(
-            '// перенести шаблон - ок' + '\n' +
-            '// перенсти шаблон для внутренних странц' + '\n' +
-            '// создать отдельную базку - ок' + '\n' +
-            '// прописать туда все страницы - in progress' + '\n' +
-            '// прописать туда метатеги - in progress' + '\n' +
-            '// сделать вывод картинок' + '\n' +
-            '// сделать вывод карт и список заведений' + '\n' +
-            '// сделать открытие изображений' + '\n' +
-            '// политика кофиденциальности' + '\n' +
-            '// ввести json разметку' + '\n' +
-            '// ввести турбо страницы для товаров' + '\n' +
-            '// ввести страницы для новостей rss' + '\n' +
-            '');
-
-
+            console.log(
+                '// перенести шаблон - ок' + '\n' +
+                '// перенсти шаблон для внутренних странц' + '\n' +
+                '// создать отдельную базку - ок' + '\n' +
+                '// прописать туда все страницы - in progress' + '\n' +
+                '// прописать туда метатеги - in progress' + '\n' +
+                '// сделать вывод картинок' + '\n' +
+                '// сделать вывод карт и список заведений' + '\n' +
+                '// сделать открытие изображений' + '\n' +
+                '// политика кофиденциальности' + '\n' +
+                '// ввести json разметку' + '\n' +
+                '// ввести турбо страницы для товаров' + '\n' +
+                '// ввести страницы для новостей rss' + '\n' +
+                '');
         </script>
-
-
         <meta charset="utf-8">
-
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
         <title><?= $title ?> - Похоронное бюро "24-Ритуал"</title>
-
         <meta name="keywords" content="<?= $keywords ?>" >
         <meta name="description" content="<?= $description ?>" >
         <meta name="robots" content="<?= $robots ?>" >
@@ -65,17 +55,14 @@ for($i=0; $i <200; $i++){
         <meta name="author" content="24-ritual.ru" >
         <meta name="reply-to" content="info@24-ritual.ru" >
         <link rel="help" href="mailto:info@24-ritual.ru" >
-
         <meta http-equiv="content-language" content="ru">
-
         <link rel="icon" type="/image/png" href="/favicon.png">
         <link rel="manifest" href="/manifest.json">
 
         <?= $json_ld ?>
 
 
-
-        <link href="/css/layout.css" rel="stylesheet" type="text/css" media="all" >
+        <link href="/css/layout.css" rel="stylesheet" type="text/css" media="all">
 
 
         <script><?= $gtm ?></script>
@@ -88,22 +75,21 @@ for($i=0; $i <200; $i++){
 
 
     <body>
+        <div id="firstPanel">
 
-    <div id="firstPanel">
-
-        <div class="wrapper row0">
-            <div id="topbar" class="clear">
-                <div class="fl_left">
-                    <ul class="nospace inline tellLine">
-
-                        <li><i class="fa fa-phone"></i><a href="tel:<?= $tell_code ?>"> <?= $tell_visual ?></a></li>
-                        <li><i class="fa fa-envelope-o"></i><a href="mailto:info@24-ritual.ru">info@24-ritual.ru</a></li>
-
-                    </ul>
+            <div class="wrapper row0">
+                <div id="topbar" class="clear">
+                    <div class="fl_left">
+                        <ul class="nospace inline tellLine">
+    
+                                <li><i class="fa fa-phone"></i><a href="tel:<?= $tell_code ?>"> <?= $tell_visual ?></a></li>
+                                <li><i class="fa fa-envelope-o"></i><a href="mailto:info@24-ritual.ru">info@24-ritual.ru</a></li>
+    
+                            </ul>
+                        </div>
                 </div>
             </div>
         </div>
-
         <!-- ################################################################################################ -->
 
         <div class="firstNavigation">
@@ -156,85 +142,80 @@ for($i=0; $i <200; $i++){
 
         <div class="wrapper row3">
             <main class="container clear">
-
-                        <!-- main body -->
-                        <!-- ################################################################################################ -->
-                        <div class="group">
-                            <div class="one_third first"><img src="images/rutual-24_1.jpg"" alt=""></div>
-                            <div class="two_third">
-
-                                <h2 class="heading">Если случилось непоправимое...</h2>
-                                <p>
-
-                                    Потеря близкого человека-это стрессовая ситуация для любого человека.
-                                    Дополнительно, она осложняется тем что в предельно сжатые сроки необходимо проделать массу работы и
-                                    учесть множество нюансов при организации похорон. Лучшее решение- это доверить процесс человеку,
-                                    знающему все тонкости и подводные камни в этом не лёгком деле. Для которого организация похорон-это профессия.
-                                </p>
-                                <p class="btmspace-80">
-                                    Поручив организацию похорон нам, вам останется лишь предупредить родственников о месте и дате прощания.
-                                    Все необходимые мероприятия- сбор документов,
-                                    заказ кремации либо копки могилы, доставка ритуальных принадлежностей, отпевание будет сделано нами.
-                                </p>
-
-                                <ul class="nospace group">
-                                    <li class="one_third first">
-                                        <h6 class="nospace btmspace-10"><a href="/ritualnyy-usluga/ritualnyy-agent"><i class="fa fa-location-arrow"></i> Выезд</a></h6>
-                                        <p class="nospace">Сотрудник бюро бесплатно выезжает к заказчику для проведения консультации и оформления заказа.
-                                            Берет на себя обязанности по сбору и подготовке всей необходимой документации для проведения обряда похорон.</p>
-                                    </li>
-                                    <li class="one_third">
-                                        <h6 class="nospace btmspace-10"><a href="/ritualnyy-usluga/ritualnyy-agent"><i class="fa fa-lock"></i> Защита </a></h6>
-                                        <p class="nospace">Юридическая образованность и опыт работы позволяют нашим сотрудниткам защитить Вас от коррумпированности
-                                            органов и обеспечить законность всех процедур</p>
-                                    </li>
-                                    <li class="one_third last">
-                                        <h6 class="nospace btmspace-10"><a href="/ritualnyy-usluga/ritualnyy-agent"><i class="fa fa-map-marker"></i> Сопровождение</a></h6>
-                                        <p class="nospace">Сопровождаем Вас от заполнения бланков, до похорон</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- ################################################################################################ -->
-                        <!-- / main body -->
-                        <div class="clear"></div>
-                    </main>
-                </div>
+                <!-- main body -->
                 <!-- ################################################################################################ -->
-                <div class="wrapper row2 bgded"">
-                <div class="overlay">
-                    <section id="pageintro" class="clear">
-                        <!-- ################################################################################################ -->
-                        <div class="center btmspace-80">
-                            <p class="xl nospace capitalise">Стоимость организации похорон</p>
-                        </div>
-
-                        <ul class="nospace group services">
+                <div class="group">
+                    <div class="one_third first"><img src="images/rutual-24_1.jpg" alt=""></div>
+                    <div class="two_third">
+                        <h2 class="heading">Если случилось непоправимое...</h2>
+                        <p>
+                            Потеря близкого человека-это стрессовая ситуация для любого человека.
+                            Дополнительно, она осложняется тем что в предельно сжатые сроки необходимо проделать массу работы и
+                            учесть множество нюансов при организации похорон. Лучшее решение- это доверить процесс человеку,
+                            знающему все тонкости и подводные камни в этом не лёгком деле. Для которого организация похорон-это профессия.
+                        </p>
+                        <p class="btmspace-80">
+                            Поручив организацию похорон нам, вам останется лишь предупредить родственников о месте и дате прощания.
+                            Все необходимые мероприятия- сбор документов,
+                            заказ кремации либо копки могилы, доставка ритуальных принадлежностей, отпевание будет сделано нами.
+                        </p>
+                        <ul class="nospace group">
                             <li class="one_third first">
-                                <article class="overlay"><a href="/pohoroni/byudzhetnyy-variant-pohoron"><i class="fa fa-legal"></i></a>
-                                    <h6 class="heading">Бюджетные похороны</h6>
-                                    <p>27 700 Рублей</p>
-                                    <footer><a href="/byudzhetnyy-variant-pohoron">Включает в себя &raquo;</a></footer>
-                                </article>
+                                <h6 class="nospace btmspace-10"><a href="/ritualnyy-usluga/ritualnyy-agent"><i class="fa fa-location-arrow"></i> Выезд</a></h6>
+                                <p class="nospace">Сотрудник бюро бесплатно выезжает к заказчику для проведения консультации и оформления заказа.
+                                    Берет на себя обязанности по сбору и подготовке всей необходимой документации для проведения обряда похорон.</p>
                             </li>
                             <li class="one_third">
-                                <article class="overlay"><a href="/pohoroni/dostoynye-pohorony"><i class="fa fa-line-chart"></i></a>
-                                    <h6 class="heading">Достойные похороны</h6>
-                                    <p>38 100 Рублей</p>
-                                    <footer><a href="/pohoroni/dostoynye-pohorony">Включает в себя &raquo;</a></footer>
-                                </article>
+                                <h6 class="nospace btmspace-10"><a href="/ritualnyy-usluga/ritualnyy-agent"><i class="fa fa-lock"></i> Защита </a></h6>
+                                <p class="nospace">Юридическая образованность и опыт работы позволяют нашим сотрудниткам защитить Вас от коррумпированности
+                                    органов и обеспечить законность всех процедур</p>
                             </li>
-                            <li class="one_third">
-                                <article class="overlay"><a href="/pohoroni/bogatye-pohorony"><i class="fa fa-archive"></i></a>
-                                    <h6 class="heading">Богатые похороны</h6>
-                                    <p>50 300 Рублей</p>
-                                    <footer><a href="/pohoroni/bogatye-pohorony">Включает в себя &raquo;</a></footer>
-                                </article>
+                            <li class="one_third last">
+                                <h6 class="nospace btmspace-10"><a href="/ritualnyy-usluga/ritualnyy-agent"><i class="fa fa-map-marker"></i> Сопровождение</a></h6>
+                                <p class="nospace">Сопровождаем Вас от заполнения бланков, до похорон</p>
                             </li>
                         </ul>
-                        <!-- ################################################################################################ -->
-                    </section>
+                    </div>
                 </div>
+                <!-- ################################################################################################ -->
+                <!-- / main body -->
+                <div class="clear"></div>
+            </main>
+        </div>
+                <!-- ################################################################################################ -->
+        <div class="wrapper row2 bgded">
+            <div class="overlay">
+                <section id="pageintro" class="clear">
+                    <!-- ################################################################################################ -->
+                    <div class="center btmspace-80">
+                        <p class="xl nospace capitalise">Стоимость организации похорон</p>
+                    </div>
+                    <ul class="nospace group services">
+                        <li class="one_third first">
+                            <article class="overlay"><a href="/pohoroni/byudzhetnyy-variant-pohoron"><i class="fa fa-legal"></i></a>
+                                <h6 class="heading">Бюджетные похороны</h6>
+                                <p>27 700 Рублей</p>
+                                <footer><a href="/byudzhetnyy-variant-pohoron">Включает в себя &raquo;</a></footer>
+                            </article>
+                        </li>
+                        <li class="one_third">
+                            <article class="overlay"><a href="/pohoroni/dostoynye-pohorony"><i class="fa fa-line-chart"></i></a>
+                                <h6 class="heading">Достойные похороны</h6>
+                                <p>38 100 Рублей</p>
+                                <footer><a href="/pohoroni/dostoynye-pohorony">Включает в себя &raquo;</a></footer>
+                            </article>
+                        </li>
+                        <li class="one_third">
+                            <article class="overlay"><a href="/pohoroni/bogatye-pohorony"><i class="fa fa-archive"></i></a>
+                                <h6 class="heading">Богатые похороны</h6>
+                                <p>50 300 Рублей</p>
+                                <footer><a href="/pohoroni/bogatye-pohorony">Включает в себя &raquo;</a></footer>
+                            </article>
+                        </li>
+                    </ul>
+                    <!-- ################################################################################################ -->
+                </section>
+            </div>
         </div>
         <!-- ################################################################################################ -->
         <div class="wrapper row7">
@@ -262,12 +243,8 @@ for($i=0; $i <200; $i++){
                 <div class="center btmspace-80">
                     <h2 class="heading uppercase btmspace-30" id="callMe">Горячая линия работает 24 часа, бесплатная консультация<br><br>
                         <div name="addForNumber" id="addForNumber">
-                            <a style="color: white; href="<?= $tell_code ?>"><?= $tell_visual ?></a>
+                            <a style="color: white" href= <?= '\"'.$tell_code.'\"' ?> ><?= $tell_visual ?></a>
                         </div>
-
-
-
-
                     </h2>
 
                     <p class="lrspace">
@@ -320,15 +297,6 @@ for($i=0; $i <200; $i++){
                     <div class="clear"></div>
             </section>
         </div>
-
-
-
-
-
-
-
-
-
 
 
         <!-- footer -->
@@ -408,6 +376,4 @@ for($i=0; $i <200; $i++){
     </style>
 
     </body>
-
-
 </html>

@@ -4,7 +4,7 @@ console.log('Подгрузился js файл к модулю списка');
 function get_pages() {
 
     $.ajax({
-        url: '/application/controllers/ajax_controller.php',
+        url: '/application/modules/list_content/ajax_controller.php',
         method: 'POST',
         data: {
             action: 'list_content',
