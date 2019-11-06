@@ -1,8 +1,8 @@
 <?php
 $model = new Model_catalog();
 $tovar_data = $model->getProductRawData($_GET["id"]);
-var_dump(get_defined_vars());
 ?>
+
 <html>
     <head>
         <meta charset="utf-8">
