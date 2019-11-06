@@ -6,7 +6,8 @@ if($_POST["uname"] && $_POST["pass"]) {
         $model_login = new Model_login();
         $result = $model_login->check_admin($_POST['uname'], $_POST['pass']);
         $_SESSION['hash'] = $result[0];
-        $flag = true;
+        if($_SESSION['hash'] !== null)
+            $flag = true;
 }
 else {
     if ($_SESSION['hash']) {
@@ -35,6 +36,7 @@ else {
         <meta name="copyright" lang="ru" content="24-ritual.ru" >
         <meta name="author" content="24-ritual.ru" >
         <meta name="reply-to" content="info@24-ritual.ru" >
+        <meta name="data-create" >
         <link rel="help" href="mailto:info@24-ritual.ru" >
 
         <meta http-equiv="content-language" content="ru">

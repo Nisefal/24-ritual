@@ -73,7 +73,7 @@ class Model_catalog
             $HTML = $HTML . '
                     <div class="inLine">
                         <a href="/ritualnyy-magazin/ritualniy-tovar?tovar=' . $row["id"] . '">
-                        <li  class="first"><img src="' . $row["url"] . '" alt="">
+                        <li  class="first"><img src="' . $row["url"] . '" alt="'.$row["alt"].'">
                         <div class="center"><p class="market">' . $row["name"] . '</p></div>
                         <div class="center"><p class="market">' . $row["cost"] . ' рублей</p>
                         </div></li>
@@ -121,6 +121,17 @@ class Model_catalog
 
     }
 
+    function getProductRawData($product_id)
+    {
+
+
+        $db = new db();
+        $resultSet = $db->db_function("SELECT 
+                                                * FROM `catalog` 
+                                                  WHERE id = '$product_id'");
+        $row = $resultSet->fetch_row();
+        return $row;
+    }
 
     function getProductCart($product_id)
     {

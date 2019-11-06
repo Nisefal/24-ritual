@@ -1,4 +1,8 @@
-
+<?php
+$model = new Model_catalog();
+$tovar_data = $model->getProductRawData($_GET["id"]);
+var_dump(get_defined_vars());
+?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -21,7 +25,20 @@
         <link rel="icon" type="/image/png" href="/favicon.png">
         <link rel="manifest" href="/manifest.json">
 
-        <?= $json_ld ?>
+        <script type='application/ld+json'>
+        {
+          "@context": "http://www.schema.org",
+          "@type": "Product",
+          "name": "<?= $tovar_data["name"] ?>",
+          "image": "<?= $tovar_data["url"] ?>",
+          "offers": [
+          {
+            "@type": "Offer",
+            "url": "http://ritual/ritualnyy-magazin/ritualniy-tovar?id=<?= $tovar_data["id"] ?>",
+            "lowPrice": "<?= $tovar_data["cost"] ?>"
+          }]
+        }
+        </script>
 
 
 

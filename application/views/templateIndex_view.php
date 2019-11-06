@@ -54,12 +54,30 @@ for($i=0; $i <200; $i++){
         <meta name="copyright" lang="ru" content="24-ritual.ru" >
         <meta name="author" content="24-ritual.ru" >
         <meta name="reply-to" content="info@24-ritual.ru" >
+        <meta name="data-create" >
         <link rel="help" href="mailto:info@24-ritual.ru" >
         <meta http-equiv="content-language" content="ru">
         <link rel="icon" type="/image/png" href="/favicon.png">
         <link rel="manifest" href="/manifest.json">
 
-        <?= $json_ld ?>
+        <script type='application/ld+json'>
+            {
+                "@context": "http://www.schema.org",
+                "@type": "LocalBusiness",
+                "name": "ООО 'БЮРО РИТУАЛЬНЫХ УСЛУГ'",
+                "url": "https://24-ritual.ru/",
+                "image": "24-ritual.ru/logo.ico",
+                "logo": "24-ritual.ru/logo.ico",
+                "telephone":"<?= $tell_visual ?>",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "улица Декабристов, дом 1",
+                    "addressLocality": "Москва",
+                    "postalCode": "127562",
+                    "addressCountry": "Россия"
+                }
+            }
+        </script>
 
 
         <link href="/css/layout.css" rel="stylesheet" type="text/css" media="all">

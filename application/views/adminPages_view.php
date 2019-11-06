@@ -36,6 +36,7 @@ if($flag === false){
         <meta name="copyright" lang="ru" content="24-ritual.ru" >
         <meta name="author" content="24-ritual.ru" >
         <meta name="reply-to" content="info@24-ritual.ru" >
+        <meta name="data-create" >
         <link rel="help" href="mailto:info@24-ritual.ru" >
 
         <meta http-equiv="content-language" content="ru">
